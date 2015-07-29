@@ -7,7 +7,7 @@
         android:id="@+id/foto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
+        android:src="@drawable/ic_no_image"
         android:layout_gravity="center_horizontal"
         android:background="@android:color/background_dark"/>
 
@@ -21,8 +21,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nome"
-        android:editable="false" />
+        android:id="@+id/nome" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,11 +63,16 @@
         android:text="nota:"
         android:id="@+id/textView5" />
 
-    <RatingBar
+    <SeekBar
         android:id="@+id/nota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numStars="5"
         android:layout_gravity="center"/>
+    <Button
+        android:text="Enviar"
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

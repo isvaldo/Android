@@ -1,8 +1,8 @@
 package com.example.isvaldo.cadastro;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class ListaAlunosActivity extends Activity {
+public class ListaAlunosActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,14 +60,12 @@ public class ListaAlunosActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.item1:
-                Intent irParaFormulario = new Intent(this, FormularioActivity.class);
-                startActivity(irParaFormulario);
-                break;
+        int selected = item.getItemId();
 
-            default:
-                break;
+
+        if (selected == R.id.menu_novo) {
+            Intent abrirFormulario = new Intent(ListaAlunosActivity.this,FormularioActivity.class);
+            startActivity(abrirFormulario);
         }
         return super.onOptionsItemSelected(item);
     }
